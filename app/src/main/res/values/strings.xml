@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Конвертер</string>
+    <string name="currencyList">Валютный лист</string>
+    <string name="item">Название валюты</string>
+    <string name="price">Цена</string>
+    <string name="code">Код</string>
+    <string name="enter_your_number">Введите число</string>
+    <string name="editCurrency">Изменить</string>
+    <string name="about"> О программе</string>
+    <string name="instructions"> Для первичного использования программы необходимо подключение к
+        интернету. Валюту можно менять в обе стороны, как левое значение, так и правое. Если при
+        выборе валюты значения не отображаются, проверьте подключение к интернету,после нажмите на
+        кнопку обновить.\n Контакт разработчика:\n emrlord@yandex.ru </string>
+    <string name="update"> Обновить данные </string>
+    <string name="ok">Понятно</string>
+    <string name="data"> Последнее обновление валюты</string>
+</resources>

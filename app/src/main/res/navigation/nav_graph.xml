@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/converterFragment">
+
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="com.example.converter.ui.ConverterFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_converter">
+        <action
+            android:id="@+id/action_converterFragment_to_valuteListFragment"
+            app:destination="@id/valuteListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/valuteListFragment"
+        android:name="com.example.converter.ui.ValuteListFragment"
+        android:label="@string/currencyList"
+        tools:layout="@layout/fragment_valute_list">
+        <argument
+            android:name="trueOrFalse"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_valuteListFragment_to_converterFragment"
+            app:destination="@id/converterFragment"
+            app:popUpTo="@id/converterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

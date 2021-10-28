@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".converter.ConverterFragment">
+
+    <data>
+
+        <variable
+            name="converterViewModel"
+            type="com.example.converter.viewmodel.ConverterViewModel" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/leftCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:gravity="center"
+                android:hint="@string/code"
+                android:text="@{converterViewModel.leftValute.charCode}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green"
+                app:layout_constraintEnd_toStartOf="@id/rightCode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/leftNumber" />
+
+            <TextView
+                android:id="@+id/rightCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:gravity="center"
+                android:hint="@string/code"
+                android:text="@{converterViewModel.rightValute.charCode}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green"
+                app:layout_constraintBaseline_toBaselineOf="@+id/leftCode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/leftCode" />
+
+            <Button
+                android:id="@+id/leftEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/editCurrency"
+                app:layout_constraintEnd_toStartOf="@id/rightEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/leftCode" />
+
+            <Button
+                android:id="@+id/rightEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/editCurrency"
+                app:layout_constraintBaseline_toBaselineOf="@+id/leftEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/leftEdit" />
+
+            <EditText
+                android:id="@+id/leftNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/enter_your_number"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:maxLines="1"
+                app:layout_constraintEnd_toStartOf="@id/rightNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <EditText
+                android:id="@+id/rightNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/enter_your_number"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:maxLines="1"
+                app:layout_constraintBaseline_toBaselineOf="@id/leftNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/leftNumber"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
