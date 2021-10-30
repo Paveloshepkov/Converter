@@ -4,6 +4,7 @@
 База данных Room.
 Сетевая библиотека Retrofit.
 Преобразование Xml файла через simplexml.
+Конвертация проходит в обе стороны, валюта поумолчанию "Российский рубль".
 
 ![image](https://user-images.githubusercontent.com/32362643/139304872-48f3409c-62b1-4b1d-8589-9824fbd5d1d5.png)
 ![image](https://user-images.githubusercontent.com/32362643/139304918-f518f7b6-6f45-4adf-9789-bd27a6318fb1.png)
